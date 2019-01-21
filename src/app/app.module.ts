@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AssignmentsComponent } from './assignments/assignments.component';
 import { SubmittedDirective } from './shared/submitted.directive';
-import { UnSubmittedDirective } from './un-submitted.directive';
+import { UnSubmittedDirective } from './shared/un-submitted.directive';
 
 @NgModule({
   declarations: [

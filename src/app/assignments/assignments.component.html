@@ -17,5 +17,6 @@
   <p appSubmitted *ngIf="assignment.submitted; else unSubmitted">
     Assignment {{assignment.name}} has been submitted.
   </p>
-  <ng-template #unSubmitted>Assignment {{assignment.name}} has NOT been submitted.</ng-template>
+  <p appUnSubmitted> lemme ceck </p>
+  <ng-template #unSubmitted appUnSubmitted>Assignment {{assignment.name}} has NOT been submitted.</ng-template>
 </div>
