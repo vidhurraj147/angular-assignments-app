@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MatButtonModule, MatFormFieldModule, MatInputModule, MatNativeDateModule, MatDatepickerModule } from '@angular/material';
+import { MatButtonModule, MatFormFieldModule, MatInputModule, MatNativeDateModule, MatDatepickerModule, MatListModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -28,7 +28,8 @@ import { AssignmentDetailComponent } from './assignments/assignment-detail/assig
     MatFormFieldModule,
     BrowserAnimationsModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
