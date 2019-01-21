@@ -4,3 +4,13 @@ angular material and animations
 
 https://material.angular.io/guide/getting-started 
 npm install --save @angular/material @angular/cdk @angular/animations 
+
+got to step 4 and copy themes available
+
+To create a angular component 
+ng generate component <name-of-component>
+OR
+ng g c <name-of-component>
+
+-- Without the test file
+ng g c --spec='false' <name-of-component>
