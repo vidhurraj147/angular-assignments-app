@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AssignmentsComponent implements OnInit {
 
+  title = "My Assignments Component";
+
   constructor() { }
 
   ngOnInit() {
