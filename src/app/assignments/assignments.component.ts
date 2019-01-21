@@ -31,7 +31,6 @@ export class AssignmentsComponent implements OnInit {
   ngOnInit() {
     setTimeout(() => {
       this.enabled = !this.enabled;
-      console.log("This is executed");
     }, 2000);
   }
 
@@ -39,6 +38,8 @@ export class AssignmentsComponent implements OnInit {
     const assignment = new Assignment();
     assignment.name = this.name;
     assignment.dueDate = this.dueDate;
+    assignment.submitted = false;
+    this.assignments.push(assignment);
   }
 
 }
