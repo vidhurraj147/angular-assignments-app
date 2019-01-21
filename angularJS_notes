@@ -46,3 +46,18 @@ Created component _ String interpolation
 
 3. Component Directive 
     Directives with template
+
+############### 
+Property Binding 
+    We bind to properties using Square Brackets []
+    [ngClass] [ngStyle] [disabled]
+
+Event Binding 
+    We bind to events using round brackets ( )
+    (click) (keyup)
+
+Two-Way Binding
+    Can simultaneously bind to a property and event, sending data both ways [( )]
+    [(ngModel)] = "<property"
+
+

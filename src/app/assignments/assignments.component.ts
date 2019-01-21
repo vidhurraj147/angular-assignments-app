@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-assignments',
   templateUrl: './assignments.component.html',
@@ -8,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class AssignmentsComponent implements OnInit {
 
   title = "My Assignments Component";
+  enabled: boolean = true;
 
   assignments = [
     {
@@ -24,6 +26,10 @@ export class AssignmentsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    setTimeout(() => {
+      this.enabled = !this.enabled;
+      console.log("This is executed");
+    }, 2000);
   }
 
 }

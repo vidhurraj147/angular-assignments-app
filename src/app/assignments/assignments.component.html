@@ -2,6 +2,12 @@
   {{title}}
 </p>
 
+<form ngForm #assignmentsForm>
+  <button mat-stroked-button
+      [disabled] = "enabled"
+      color="primary">Add Assignment</button>
+</form>
+
 <!-- <div *ngFor="let assignment of assignments"
   [ngStyle] = " {'color' : assignment.submitted == true ? 'green' : 'red'} "
 > -->
@@ -17,6 +23,5 @@
   <p appSubmitted *ngIf="assignment.submitted; else unSubmitted">
     Assignment {{assignment.name}} has been submitted.
   </p>
-  <p appUnSubmitted> lemme ceck </p>
-  <ng-template #unSubmitted appUnSubmitted>Assignment {{assignment.name}} has NOT been submitted.</ng-template>
+  <ng-template #unSubmitted>Assignment {{assignment.name}} has NOT been submitted.</ng-template>
 </div>
