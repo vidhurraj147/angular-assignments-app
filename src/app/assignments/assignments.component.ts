@@ -13,6 +13,7 @@ export class AssignmentsComponent implements OnInit {
   enabled: boolean = true;
   name: string;
   dueDate: Date;
+  formVisibile: boolean = false; 
 
   selectedAssignment: Assignment;
 
@@ -31,20 +32,17 @@ export class AssignmentsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    setTimeout(() => {
-      this.enabled = !this.enabled;
-    }, 2000);
-  }
-
-  onSubmit() {
-    const assignment = new Assignment();
-    assignment.name = this.name;
-    assignment.dueDate = this.dueDate;
-    assignment.submitted = false;
-    this.assignments.push(assignment);
+    // setTimeout(() => {
+    //   this.enabled = !this.enabled;
+    // }, 2000);
   }
 
   setSelected(assignment: Assignment){
     this.selectedAssignment = assignment;
   }
+
+  onAddBtnClick(){
+    this.formVisibile = true;
+  }
+
 }
