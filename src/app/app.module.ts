@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AssignmentsComponent } from './assignments/assignments.component';
 import { SubmittedDirective } from './shared/submitted.directive';
+import { UnSubmittedDirective } from './un-submitted.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     AssignmentsComponent,
-    SubmittedDirective
+    SubmittedDirective,
+    UnSubmittedDirective
   ],
   imports: [
     BrowserModule,
