@@ -1,3 +1,19 @@
 <p>
   {{title}}
 </p>
+
+<!-- <div *ngFor="let assignment of assignments"
+  [ngStyle] = " {'color' : assignment.submitted == true ? 'green' : 'red'} "
+> -->
+
+<div *ngFor="let assignment of assignments"
+  [ngClass] = "{
+    'submitted' : assignment.submitted === true,
+    'unSubmitted' : assignment.submitted === false
+  }"
+>
+  <p *ngIf="assignment.submitted; else unSubmitted">
+    Assignment {{assignment.name}} has been submitted.
+  </p>
+  <ng-template #unSubmitted>Assignment {{assignment.name}} has NOT been submitted.</ng-template>
+</div>

@@ -7,6 +7,25 @@ npm install --save @angular/material @angular/cdk @angular/animations
 
 got to step 4 and copy themes available
 
+#### Angular Material comes with 6 Components
+1. Navigation
+    Menu, Side Navigation, ToolBars
+
+2. Tables
+    Paginators, Tables
+
+3. Buttons and Indicators
+    Buttons, batches
+
+4. Popups and Modals
+    Tooltips, Scrollbars
+
+5. Layout
+    Grids, Lists, Cards
+
+6. Form Controls 
+    Auto Complete, Check Boxes, Date Pickers 
+
 To create a angular component 
 ng generate component <name-of-component>
 OR
@@ -16,3 +35,14 @@ ng g c <name-of-component>
 ng g c --spec='false' <name-of-component>
 
 Created component _ String interpolation
+
+-- Directives 
+3 kinds of Directives
+1. Structural Directive
+    Manipulate DOM by adding and removing elements (*ngFor *ngIf)
+
+2. Attribute Directive
+    Change the appearance / behavior of components (NgClass NgStyle)
+
+3. Component Directive 
+    Directives with template
