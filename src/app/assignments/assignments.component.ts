@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Assignment } from './assignment.model';
 
 
 @Component({
@@ -10,15 +11,17 @@ export class AssignmentsComponent implements OnInit {
 
   title = "My Assignments Component";
   enabled: boolean = true;
+  name: string;
+  dueDate: Date;
 
-  assignments = [
+  assignments: Assignment[] = [
     {
       name: "one",
-      dueDate: '2018-01-01',
+      dueDate: new Date('2018-01-01'),
       submitted: true
     },{
       name: "two",
-      dueDate: '2019-01-01',
+      dueDate: new Date('2019-01-01'),
       submitted: false
     }
   ];
@@ -30,6 +33,12 @@ export class AssignmentsComponent implements OnInit {
       this.enabled = !this.enabled;
       console.log("This is executed");
     }, 2000);
+  }
+
+  onSubmit() {
+    const assignment = new Assignment();
+    assignment.name = this.name;
+    assignment.dueDate = this.dueDate;
   }
 
 }
