@@ -1,0 +1,6 @@
+ng new angular-assignments-app
+
+angular material and animations
+
+https://material.angular.io/guide/getting-started 
+npm install --save @angular/material @angular/cdk @angular/animations 
