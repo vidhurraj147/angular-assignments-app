@@ -9,13 +9,15 @@ import { AssignmentsComponent } from './assignments/assignments.component';
 import { SubmittedDirective } from './shared/submitted.directive';
 import { UnSubmittedDirective } from './shared/un-submitted.directive';
 import { FormsModule } from '@angular/forms';
+import { AssignmentDetailComponent } from './assignments/assignment-detail/assignment-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AssignmentsComponent,
     SubmittedDirective,
-    UnSubmittedDirective
+    UnSubmittedDirective,
+    AssignmentDetailComponent
   ],
   imports: [
     BrowserModule,
