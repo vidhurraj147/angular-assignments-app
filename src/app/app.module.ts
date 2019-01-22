@@ -10,7 +10,8 @@ import { SubmittedDirective } from './shared/submitted.directive';
 import { UnSubmittedDirective } from './shared/un-submitted.directive';
 import { FormsModule } from '@angular/forms';
 import { AssignmentDetailComponent } from './assignments/assignment-detail/assignment-detail.component';
-import { AddAssignmentComponent } from './add-assignment/add-assignment.component';
+import { AddAssignmentComponent } from './assignments/add-assignment/add-assignment.component';
+import { AssignmentsService } from './shared/assignments.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,9 @@ import { AddAssignmentComponent } from './add-assignment/add-assignment.componen
     MatCardModule,
     MatCheckboxModule
   ],
-  providers: [],
+  providers: [
+    AssignmentsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

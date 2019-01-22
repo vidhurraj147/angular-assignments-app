@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Assignment } from './assignment.model';
+import { AssignmentsService } from '../shared/assignments.service';
 
 
 @Component({
@@ -13,38 +14,46 @@ export class AssignmentsComponent implements OnInit {
   enabled: boolean = true;
   name: string;
   dueDate: Date;
+  formVisibile: boolean = false; 
 
   selectedAssignment: Assignment;
 
-  assignments: Assignment[] = [
-    {
-      name: "one",
-      dueDate: new Date('2018-01-01'),
-      submitted: true
-    },{
-      name: "two",
-      dueDate: new Date('2019-01-01'),
-      submitted: false
-    }
-  ];
+  assignments: Assignment[];
 
-  constructor() { }
+  constructor(private assignmentsService : AssignmentsService) {
+
+   }
 
   ngOnInit() {
-    setTimeout(() => {
-      this.enabled = !this.enabled;
-    }, 2000);
+    // this.assignments = this.assignmentsService.getAssignments();
+    // setTimeout(() => {
+    //   this.enabled = !this.enabled;
+    // }, 2000);
+    this.getAssignments();
   }
 
-  onSubmit() {
-    const assignment = new Assignment();
-    assignment.name = this.name;
-    assignment.dueDate = this.dueDate;
-    assignment.submitted = false;
-    this.assignments.push(assignment);
+  getAssignments(){
+    this.assignmentsService
+        .getAssignments()
+        .subscribe( assignments => this.assignments = assignments );
+
   }
 
   setSelected(assignment: Assignment){
     this.selectedAssignment = assignment;
   }
+
+  onAddBtnClick(){
+    this.formVisibile = true;
+    this.selectedAssignment = null;
+  }
+
+  onNewAssignment(event: Assignment){
+    console.log(event);
+    this.assignmentsService
+        .addAssignments(event)
+        .subscribe(success=> console.log("success"));
+    this.formVisibile = false;
+  }
+
 }

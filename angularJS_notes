@@ -61,3 +61,30 @@ Two-Way Binding
     [(ngModel)] = "<property"
 
 
+############## Services and Observables Http get methods
+Wy we need services 
+    Shouldnot handle data in our components
+    Coponents should focus on presenting data
+    Services should provide the data throughout your app
+
+Service --> GET POST UPDATE DELETE methods should be implemented
+
+Observables 
+    An observable lets you subscribe asynchronous data
+    Observable lets you manage Asynchronous data 
+    Relationship between publisher and subscriber
+    Emits multiple values over time
+    Has operators as .map()  .filter() and forEach()
+
+Diff between Observables and Promises     
+Observables
+    A stream of data which is open 
+    can be cancelled 
+    Provides operators such as MAP and forEach
+
+Promises
+    Resolves once data is received 
+    Cannot be cancelled 
+    NO operators 
+    
+        
