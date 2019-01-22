@@ -11,7 +11,10 @@ import { UnSubmittedDirective } from './shared/un-submitted.directive';
 import { FormsModule } from '@angular/forms';
 import { AssignmentDetailComponent } from './assignments/assignment-detail/assignment-detail.component';
 import { AddAssignmentComponent } from './assignments/add-assignment/add-assignment.component';
+<<<<<<< HEAD
 import { AssignmentsService } from './shared/assignments.service';
+=======
+>>>>>>> 20cf82eee8a683dbdb5f862491ed60e6eb5e34c8
 
 @NgModule({
   declarations: [

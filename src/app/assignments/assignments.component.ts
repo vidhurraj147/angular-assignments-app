@@ -25,6 +25,7 @@ export class AssignmentsComponent implements OnInit {
    }
 
   ngOnInit() {
+<<<<<<< HEAD
     // this.assignments = this.assignmentsService.getAssignments();
     // setTimeout(() => {
     //   this.enabled = !this.enabled;
@@ -37,6 +38,11 @@ export class AssignmentsComponent implements OnInit {
         .getAssignments()
         .subscribe( assignments => this.assignments = assignments );
 
+=======
+    // setTimeout(() => {
+    //   this.enabled = !this.enabled;
+    // }, 2000);
+>>>>>>> 20cf82eee8a683dbdb5f862491ed60e6eb5e34c8
   }
 
   setSelected(assignment: Assignment){
@@ -45,6 +51,7 @@ export class AssignmentsComponent implements OnInit {
 
   onAddBtnClick(){
     this.formVisibile = true;
+<<<<<<< HEAD
     this.selectedAssignment = null;
   }
 
@@ -54,6 +61,8 @@ export class AssignmentsComponent implements OnInit {
         .addAssignments(event)
         .subscribe(success=> console.log("success"));
     this.formVisibile = false;
+=======
+>>>>>>> 20cf82eee8a683dbdb5f862491ed60e6eb5e34c8
   }
 
 }
